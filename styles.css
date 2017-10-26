@@ -50,7 +50,7 @@ body {
 .tooltip-top .text {
   visibility: hidden;
   width: 150px;
-  margin: 1em;
+  margin: 0.5em;
   background-color: #0084b4;
   color: #fff;
   text-align: center;
