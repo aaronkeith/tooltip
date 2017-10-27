@@ -1,32 +1,32 @@
 const $button = document.querySelectorAll('.button')
-const intViewportHeight = window.innerHeight
-const intViewportWidth = window.innerWidth
 
 $button.forEach(el => {
   const xCoord = el.getBoundingClientRect().x
   const yCoord = el.getBoundingClientRect().y
-  console.log(xCoord)
-  console.log(yCoord)
+  const intViewportWidth = window.innerWidth
   el.addEventListener('mouseenter', event => {
     const { top, bottom, left, right } = el.getBoundingClientRect()
-     if(xCoord ) {
-      event.target.classList.remove('bottom', 'left', 'right')
-      event.target.classList.add('top')
-      console.log(yCoord)
+     if(yCoord > 40 && xCoord > 120 && (intViewportWidth - xCoord > 255) ) {
+      event.target.classList.remove('tooltip-bottom', 'tooltip-left', 'tooltip-right')
+      event.target.classList.add('tooltip-top')
+      console.log('top');
     }
-    else if (right > 150 || top < 30) {
-      event.target.classList.remove('bottom', 'left', 'top')
-      event.target.classList.add('right')
-    }
-    else if
-    (left > 150 || top < 30) {
-      event.target.classList.remove('bottom', 'right', 'top')
-      event.target.classList.add('left')
+    else if ((yCoord > 20) && (intViewportWidth - xCoord) > 250)  {
+      event.target.classList.remove('tooltip-bottom', 'tooltip-left', 'tooltip-top')
+      event.target.classList.add('tooltip-right')
+      console.log('right');
     }
     else if
-    (bottom > 20) {
-      event.target.classList.remove('left', 'right', 'top')
-      event.target.classList.add('bottom')
+    (yCoord > 20 && (intViewportWidth - xCoord) < 250) {
+      event.target.classList.remove('tooltip-bottom', 'tooltip-right', 'tooltip-top')
+      event.target.classList.add('tooltip-left')
+      console.log('left');
+    }
+    else if
+    (yCoord <= 0 && (intViewportWidth - xCoord) > 50) {
+      event.target.classList.remove('tooltip-left', 'tooltip-right', 'tooltip-top')
+      event.target.classList.add('tooltip-bottom')
+      console.log('bottom');
     }
   })
 })

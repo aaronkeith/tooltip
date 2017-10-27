@@ -25,128 +25,22 @@ body {
 
 #top-left {
   position: absolute;
-  left: 2em;
-  top: 3em;
+  top: 2em;
 }
 
 #top-right {
   position: absolute;
-  right: 2em;
-  top: 3em;
+  right: 9em;
 }
 
 #bottom-left {
   position: absolute;
-  left: 2em;
-  bottom: 3em;
+  bottom: 12em;
+  left: 9em;
 }
 
 #bottom-right {
   position: absolute;
-  right: 2em;
+  right: 2px;
   bottom: 3em;
-}
-
-.tooltip-top .tooltiptext {
-  visibility: hidden;
-  width: 150px;
-  margin: 0.5em;
-  background-color: #0084b4;
-  color: #fff;
-  text-align: center;
-  border-radius: 10px;
-  padding: 3px;
-  position: absolute;
-  bottom: 100%;
-  left: -25%;
-  z-index: 1;
-}
-
-.tooltip-bottom .tooltiptext {
-  visibility: hidden;
-  width: 150px;
-  margin: 0.5em;
-  background-color: #0084b4;
-  color: #fff;
-  text-align: center;
-  border-radius: 10px;
-  padding: 3px;
-  position: absolute;
-  top: 100%;
-  left: -25%;
-  z-index: 1;
-}
-
-.tooltip-left .tooltiptext {
-  visibility: hidden;
-  width: 150px;
-  margin: 0.5em;
-  background-color: #0084b4;
-  color: #fff;
-  text-align: center;
-  border-radius: 10px;
-  padding: 3px;
-  position: absolute;
-  top: 5%;
-  right: 100%;
-  z-index: 1;
-}
-
-.tooltip-right .tooltiptext {
-  visibility: hidden;
-  width: 150px;
-  margin: 0.5em;
-  background-color: #0084b4;
-  color: #fff;
-  text-align: center;
-  border-radius: 10px;
-  padding: 3px;
-  position: absolute;
-  top: 5%;
-  left: 100%;
-  z-index: 1;
-}
-
-.tooltip-top .tooltiptext::after {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-}
-
-.tooltip-top:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
-}
-
-.tooltip-bottom .tooltiptext::after {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-}
-
-.tooltip-bottom:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
-}
-
-.tooltip-left .tooltiptext::after {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-}
-
-.tooltip-left:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
-}
-
-.tooltip-right .tooltiptext::after {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-}
-
-.tooltip-right:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
 }
